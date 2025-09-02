@@ -51,31 +51,6 @@
     &copy; 2025 Jhun Norman Alonzo. All rights reserved.
   </footer>
 
-  <script>
-
-    const toggleBtn = document.getElementById("toggle-theme");
-const htmlElement = document.documentElement;
-
-// Check for saved theme in localStorage
-if (localStorage.getItem("theme") === "light") {
-  htmlElement.classList.remove("dark");
-  toggleBtn.textContent = "☀️ Light Mode";
-} else {
-  htmlElement.classList.add("dark");
-  toggleBtn.textContent = "🌙 Dark Mode";
-}
-
-toggleBtn.addEventListener("click", () => {
-  htmlElement.classList.toggle("dark");
-  if (htmlElement.classList.contains("dark")) {
-    localStorage.setItem("theme", "dark");
-    toggleBtn.textContent = "🌙 Dark Mode";
-  } else {
-    localStorage.setItem("theme", "light");
-    toggleBtn.textContent = "☀️ Light Mode";
-  }
-});
-
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
