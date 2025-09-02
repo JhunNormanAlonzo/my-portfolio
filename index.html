@@ -1,102 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhun Norman Alonzo | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-all duration-300">
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-    <!-- NAVBAR -->
-    <nav class="flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow-md">
-        <h1 class="text-2xl font-bold">Jhun Norman Alonzo</h1>
-        <button id="theme-toggle" class="px-4 py-2 rounded bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition">
-            🌙 Dark Mode
-        </button>
-    </nav>
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 shadow-md">
+    <h1 class="text-2xl font-bold">Jhun Norman Alonzo</h1>
+    <button id="toggle-theme" class="p-2 rounded-lg bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-100">
+      🌙 Dark Mode
+    </button>
+  </header>
 
-    <!-- HERO SECTION -->
-    <section class="text-center py-16">
-        <h2 class="text-4xl font-bold mb-4">Hello, I'm <span class="text-blue-500">Jhun Norman</span></h2>
-        <p class="text-lg mb-6">A passionate developer crafting modern web & mobile solutions.</p>
-        <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg text-lg">Get in Touch</a>
+  <!-- Main Content -->
+  <main class="max-w-5xl mx-auto p-6">
+    <!-- About Section -->
+    <section class="mb-8">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        Experienced developer skilled in building robust and scalable solutions using modern technologies.
+      </p>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="max-w-4xl mx-auto px-6 py-12">
-        <h3 class="text-3xl font-semibold mb-6 text-center">About Me</h3>
-        <p class="text-lg text-center leading-relaxed">
-            Experienced full-stack developer with expertise in building responsive web and mobile applications.  
-            Skilled in Flutter, Laravel, and modern UI frameworks, with hands-on experience in database management,  
-            AI-assisted coding, and project leadership.
-        </p>
+    <!-- Skills Section -->
+    <section class="mb-8">
+      <h2 class="text-3xl font-bold mb-4">Skills</h2>
+      <ul class="space-y-3 text-lg">
+        <li>✅ Mobile Developer – Experienced in Flutter with integrations in native Java (Android) and Swift (iOS).</li>
+        <li>✅ Backend Developer – Proficient in Laravel framework with Livewire for building dynamic applications.</li>
+        <li>✅ Frontend Developer – Skilled in modern UI frameworks such as Tailwind CSS, Bootstrap, and AI-assisted coding with GitHub Copilot.</li>
+        <li>✅ Database Administrator – Specialized in MySQL, including optimization and management of complex databases.</li>
+        <li>✅ AI & Emerging Technologies – Actively enhancing expertise in Claude Code, ChatGPT 5, and GitHub Copilot for intelligent development workflows.</li>
+        <li>✅ Project Leadership & Deployment – Proven track record as a Project Leader and Deployment Specialist, with 3+ successful international physical deployments across Sydney, Melbourne, and Singapore.</li>
+      </ul>
     </section>
 
-    <!-- SKILLS SECTION -->
-    <section class="bg-gray-200 dark:bg-gray-800 py-12">
-        <h3 class="text-3xl font-semibold text-center mb-8">Skills & Expertise</h3>
-        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 px-6">
-            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold mb-2">Mobile Developer</h4>
-                <p>Experienced in Flutter with integrations in native Java (Android) and Swift (iOS).</p>
-            </div>
-            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold mb-2">Backend Developer</h4>
-                <p>Proficient in Laravel with Livewire for building dynamic applications.</p>
-            </div>
-            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold mb-2">Frontend Developer</h4>
-                <p>Skilled in Tailwind CSS, Bootstrap, and AI-assisted coding with GitHub Copilot.</p>
-            </div>
-            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold mb-2">Database Administrator</h4>
-                <p>Specialized in MySQL optimization and management of complex databases.</p>
-            </div>
-            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold mb-2">AI & Emerging Tech</h4>
-                <p>Expertise in Claude Code, ChatGPT 5, and GitHub Copilot for intelligent workflows.</p>
-            </div>
-            <div class="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-md">
-                <h4 class="text-xl font-bold mb-2">Project Leadership</h4>
-                <p>Led 3+ successful international deployments across Sydney, Melbourne, and Singapore.</p>
-            </div>
-        </div>
+    <!-- Contact Section -->
+    <section class="mb-8">
+      <h2 class="text-3xl font-bold mb-4">Contact</h2>
+      <p>Email: <a href="mailto:jhun@example.com" class="text-blue-500 hover:underline">jhun@example.com</a></p>
     </section>
+  </main>
 
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="py-16 text-center">
-        <h3 class="text-3xl font-semibold mb-4">Contact Me</h3>
-        <p class="mb-6">Interested in working together? Let's connect!</p>
-        <a href="mailto:jhunnorman@example.com" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg text-lg">Send Email</a>
-    </section>
+  <!-- Footer -->
+  <footer class="text-center p-4 border-t border-gray-300 dark:border-gray-700">
+    &copy; 2025 Jhun Norman Alonzo. All rights reserved.
+  </footer>
 
-    <!-- FOOTER -->
-    <footer class="text-center py-6 bg-gray-200 dark:bg-gray-800">
-        <p>&copy; 2025 Jhun Norman Alonzo. All Rights Reserved.</p>
-    </footer>
-
-    <!-- DARK MODE SCRIPT -->
-    <script>
-        const toggle = document.getElementById('theme-toggle');
-        toggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            if (document.documentElement.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-                toggle.textContent = '☀️ Light Mode';
-            } else {
-                localStorage.setItem('theme', 'light');
-                toggle.textContent = '🌙 Dark Mode';
-            }
-        });
-    </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
